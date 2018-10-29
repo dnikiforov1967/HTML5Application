@@ -76,3 +76,9 @@ body {
     margin-left: 45px;
     margin-right: 5px;
 }
+
+.infoClass {
+    border-style: solid;
+    width:50%;
+    float:right;
+}
