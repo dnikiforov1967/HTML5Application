@@ -66,21 +66,13 @@ body {
     display: block;
 }
 
-.imageDiv {
-    padding: 5px;
-    margin: 5px;    
-    margin-top: 20px;
-    float: right;
-    width:50%;
-}
-
-#animal {
-    width:70%;
-}
-
-.footer {
-    margin-top: 35%;
-    border-color: black;
-    border-style: solid;
-    clear: both;
+.selectClass {
+    background-color:  white;
+    border-radius: 5px;
+    width:100%;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 45px;
+    margin-right: 5px;
 }
