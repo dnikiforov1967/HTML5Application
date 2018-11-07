@@ -10,39 +10,18 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/head.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="js/main.js"></script>
     </head>
-    <body>
-        <div class="headdiv">
-            <div class="topPoint">
-                <a href="#">Health check</a>
-                <div class="dropdown">
-                    <a href="#" onclick="allocateImage(0)">Directory Cluster</a>
-                    <a href="#" onclick="allocateImage(1)">Client Cluster</a>
-                    <a href="#" onclick="allocateImage(2)">Inactive Nodes</a>
-                    <a href="#" onclick="allocateImage(3)">Healthcheck</a>
-                </div>
-            </div>
-            <div class="topPoint">
-                <a href="#">Requests</a>
-            </div>
-            <div class="topPoint">
-                <a href="#">Special</a>
-                <div class="dropdown">
-                    <a href="#" onclick="allocateImage(4)">Restore</a>
-                </div>                
-            </div>
-            <div class="topPoint">
-                <select class="selectClass">
-                    <option value="all">all</option>
-                    <option value="dbt-directory01">dbt-directory01</option>
-                    <option value="dbt-directory02">dbt-directory02</option>
-                    <option value="dbt-directory03">dbt-directory03</option>
-                </select>
-            </div>            
-        </div>
-        <div class="infoClass">
-            
-        </div>
+    <body ng-app="ping" ng-controller="myCtrl">
+		<div mycolor="colorValue">
+			<p>Show me</p>
+		</div>
+		<div>
+			<select ng-model="colorValue">
+				<option ng-repeat="x in colorSet" value="{{x}}">{{x}}</option>
+			</select>			
+		</div>
     </body>
 </html>

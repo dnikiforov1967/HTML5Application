@@ -4,15 +4,32 @@
  * and open the template in the editor.
  */
 
-var images = [
-    "img/biber.jpeg",
-    "img/hampster.jpeg",
-    "img/mouse.jpeg",
-    "img/possum.jpeg",
-    "img/raccoon.jpeg"
-];
 
-function allocateImage(i) {
-    var image = images[i];
-    document.getElementById("animal").src=image;
-}
+
+var app = angular.module('ping', []);
+var ctrl = app.controller("myCtrl", function($scope) {
+	$scope.colorSet = ["green","red","blue","grey"];
+	$scope.colorValue="green";
+});
+
+app.directive("mycolor",function() {
+	return {
+		restrict: 'A',
+		scope: {color: '=mycolor'},
+		link: function(scope, $element, $attrs) {
+			$element.css({
+				position: 'relative',
+				border: '1px solid red',
+				backgroundColor: scope.color,
+				cursor: 'pointer',
+				display: 'block',
+				width: '65px'
+			});
+			scope.$watch('color', function (v) {
+				$element.css({
+					backgroundColor: scope.color
+				});
+			});
+		}	
+  };
+});
