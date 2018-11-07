@@ -25,7 +25,7 @@ app.directive("mycolor",function() {
 				display: 'block',
 				width: '65px'
 			});
-			scope.$watch('color', function (v) {
+			scope.$watch('color', function () {
 				$element.css({
 					backgroundColor: scope.color
 				});
