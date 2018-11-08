@@ -25,3 +25,21 @@ app.directive("mycolor",function() {
 		}	
   };
 });
+
+app.directive("mytimer", ['$interval', function($interval) {
+	var counter = 0;
+	return {
+		retsrict:'A',
+		scope: {
+			period: '=mytimer'
+		},
+		link: function(scope, $element, $attrs) {
+			var clrs = $parse($attrs.colors)
+			$interval(function() {
+				$element.css({
+					backgroundColor: clrs[counter]
+				});
+			}, scope.period);
+		}
+	};
+}])
