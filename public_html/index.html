@@ -19,12 +19,20 @@ and open the template in the editor.
 			<p>Show me</p>
 		</div>
 		<div>
-			<form>
+			<form class='formX'>
 				Pick a color:
-				<input type="radio" ng-model="colorValue" value="green">Green
-				<input type="radio" ng-model="colorValue" value="red">Red
-				<input type="radio" ng-model="colorValue" value="blue">Blue
-				<input type="radio" ng-model="colorValue" value="grey">Grey
+				<div class="radioDiv">
+					<input class='radioX' type="radio" ng-model="colorValue" value="green">Green
+				</div>	
+				<div class="radioDiv">
+					<input class='radioX' type="radio" ng-model="colorValue" value="red">Red
+				</div>
+				<div class="radioDiv">
+					<input class='radioX' type="radio" ng-model="colorValue" value="blue">Blue
+				</div>	
+				<div class="radioDiv">
+					<input class='radioX' type="radio" ng-model="colorValue" value="grey">Grey
+				</div>	
 			</form>			
 		</div>
     </body>

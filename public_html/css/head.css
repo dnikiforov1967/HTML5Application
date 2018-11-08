@@ -20,3 +20,13 @@ body {
 	display: block;
 	width: 100%;
 }
+
+.radioDiv {
+	padding-top: 5px; 
+	padding-bottom: 5px;
+}
+
+.radioX {
+	display: inline-block;
+	text-align: right;
+}
