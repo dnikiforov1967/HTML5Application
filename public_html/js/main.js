@@ -17,14 +17,6 @@ app.directive("mycolor",function() {
 		restrict: 'A',
 		scope: {color: '=mycolor'},
 		link: function(scope, $element, $attrs) {
-			$element.css({
-				position: 'relative',
-				border: '1px solid red',
-				backgroundColor: scope.color,
-				cursor: 'pointer',
-				display: 'block',
-				width: '65px'
-			});
 			scope.$watch('color', function () {
 				$element.css({
 					backgroundColor: scope.color

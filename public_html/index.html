@@ -15,13 +15,17 @@ and open the template in the editor.
         <script src="js/main.js"></script>
     </head>
     <body ng-app="ping" ng-controller="myCtrl">
-		<div mycolor="colorValue">
+		<div class="easyBox" mycolor="colorValue">
 			<p>Show me</p>
 		</div>
 		<div>
-			<select ng-model="colorValue">
-				<option ng-repeat="x in colorSet" value="{{x}}">{{x}}</option>
-			</select>			
+			<form>
+				Pick a color:
+				<input type="radio" ng-model="colorValue" value="green">Green
+				<input type="radio" ng-model="colorValue" value="red">Red
+				<input type="radio" ng-model="colorValue" value="blue">Blue
+				<input type="radio" ng-model="colorValue" value="grey">Grey
+			</form>			
 		</div>
     </body>
 </html>
