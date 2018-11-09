@@ -31,13 +31,12 @@ app.directive("mytimer", ['$interval', function($interval) {
 	return {
 		retsrict:'A',
 		scope: {
-			period: '=mytimer'
+			period: '='
 		},
 		link: function(scope, $element, $attrs) {
-			var clrs = $parse($attrs.colors)
 			$interval(function() {
 				$element.css({
-					backgroundColor: clrs[counter]
+					backgroundColor: 'grey'
 				});
 			}, scope.period);
 		}
