@@ -55,7 +55,7 @@ app.directive("mytimer", ['$interval', function($interval) {
 		},
 		link: function(scope, $element, $attrs) {
 			$interval(function() {
-				counter = (counter==scope.collist.length-1 ? 0 : ++counter);
+				counter = (counter>=scope.collist.length-1 ? 0 : ++counter);
 				$element.css({
 					backgroundColor: scope.collist[counter]
 				});
