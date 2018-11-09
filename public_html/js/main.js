@@ -35,8 +35,9 @@ app.directive("mytimer", ['$interval', function($interval) {
 		},
 		link: function(scope, $element, $attrs) {
 			$interval(function() {
+				counter = (counter==3 ? 0 : ++counter);
 				$element.css({
-					backgroundColor: 'grey'
+					backgroundColor: scope.$parent.colorSet[counter]
 				});
 			}, scope.period);
 		}
