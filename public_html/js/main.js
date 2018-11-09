@@ -11,6 +11,24 @@ var ctrl = app.controller("myCtrl", ['$scope', function($scope) {
 	$scope.colorSet = ["green","red","blue","grey"];
 	$scope.colorValue="green";
 	$scope.mychoose = { mycolor: 'green' }
+	$scope.wert = '';
+	
+	$scope.appendColorLast = function() {
+		$scope.colorSet.push($scope.wert);
+	}
+	
+	$scope.appendColorFirst = function() {
+		$scope.colorSet.unshift($scope.wert);
+	}	
+
+	$scope.removeColorLast = function() {
+		$scope.colorSet.pop();
+	}
+	
+	$scope.removeColorFirst = function() {
+		$scope.colorSet.shift();
+	}	
+		
 }]);
 
 app.directive("mycolor",function() {
@@ -37,7 +55,7 @@ app.directive("mytimer", ['$interval', function($interval) {
 		},
 		link: function(scope, $element, $attrs) {
 			$interval(function() {
-				counter = (counter==3 ? 0 : ++counter);
+				counter = (counter==scope.collist.length-1 ? 0 : ++counter);
 				$element.css({
 					backgroundColor: scope.collist[counter]
 				});

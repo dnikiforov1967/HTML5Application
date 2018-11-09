@@ -27,6 +27,15 @@ and open the template in the editor.
 		<div class="easyBox" mytimer period="1000" collist="colorSet">
 			<p>Show me dura</p>
 		</div>
+		<div>
+			<p>Append new color<p/>
+			<input type="text" ng-model="wert">
+			<button ng-click="appendColorLast()">Last</button>
+			<button ng-click="appendColorFirst()">First</button>
+			<p>Remove color<p/>
+			<button ng-click="removeColorLast()">Last</button>
+			<button ng-click="removeColorFirst()">First</button>
+		</div>
     </body>
 	
 </html>
