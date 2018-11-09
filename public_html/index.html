@@ -19,25 +19,23 @@ and open the template in the editor.
 			<p>Show me</p>
 		</div>
 		<div>
-			<form class='formX'>
-				Pick a color:
-				<div class="radioDiv">
-					<input class='radioX' type="radio" ng-model="colorValue" value="green">Green
-				</div>	
-				<div class="radioDiv">
-					<input class='radioX' type="radio" ng-model="colorValue" value="red">Red
-				</div>
-				<div class="radioDiv">
-					<input class='radioX' type="radio" ng-model="colorValue" value="blue">Blue
-				</div>	
-				<div class="radioDiv">
-					<input class='radioX' type="radio" ng-model="colorValue" value="grey">Grey
-				</div>	
-			</form>			
+			Pick a color:
+			<div class="radioDiv">
+				<input name="chooseColor" class='radioX' type="radio" ng-model="colorValue" value="green">Green
+			</div>
+			<div class="radioDiv">
+				<input name="chooseColor" class='radioX' type="radio" ng-model="colorValue" value="red">Red
+			</div>
+			<div class="radioDiv">
+				<input name="chooseColor" class='radioX' type="radio" ng-model="colorValue" value="blue">Blue
+			</div>	
+			<div class="radioDiv">
+				<input name="chooseColor" class='radioX' type="radio" ng-model="colorValue" value="grey">Grey
+			</div>	
 		</div>
 		<div class="easyBox" mytimer period="1000" collist="colorSet">
 			<p>Show me dura</p>
-		</div>		
+		</div>
     </body>
 	
 </html>
