@@ -7,10 +7,11 @@
 
 
 var app = angular.module('ping', []);
-var ctrl = app.controller("myCtrl", function($scope) {
+var ctrl = app.controller("myCtrl", ['$scope', function($scope) {
 	$scope.colorSet = ["green","red","blue","grey"];
 	$scope.colorValue="green";
-});
+	$scope.mychoose = { mycolor: 'green' }
+}]);
 
 app.directive("mycolor",function() {
 	return {
