@@ -31,13 +31,14 @@ app.directive("mytimer", ['$interval', function($interval) {
 	return {
 		retsrict:'A',
 		scope: {
-			period: '='
+			period: '=',
+			collist: '='
 		},
 		link: function(scope, $element, $attrs) {
 			$interval(function() {
 				counter = (counter==3 ? 0 : ++counter);
 				$element.css({
-					backgroundColor: scope.$parent.colorSet[counter]
+					backgroundColor: scope.collist[counter]
 				});
 			}, scope.period);
 		}
